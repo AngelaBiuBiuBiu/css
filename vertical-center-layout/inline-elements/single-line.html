@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>内联元素单行垂直居中</title>
+    <!-- 有时候行内元素或者文字显示为垂直居中，仅仅是因为它们的上下内边距相等 -->
+    <style>
+        body {
+            background: rebeccapurple;
+        }
+        .wrapper {
+            background: white;
+            margin: 20px 0;
+            padding: 50px;
+        }
+        .wrapper a {
+            background: black;
+            color: white;
+            text-decoration: none;
+            padding: 40px 30px;
+        }
+    </style>
+    <!-- 若出于某些原因padding不能用，而你又需要将一些不换行的文字垂直居中，你可以使文字的line-height和height的值相等 -->
+    <style>
+        main {
+            background: white;
+            margin: 20px 0;
+            padding: 40px;
+        }
+        main div {
+            background: black;
+            color: white;
+            padding: 20px;
+            white-space: nowrap;
+
+            height: 100px;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <a href="#0">We're</a>
+        <a href="#0">Centered</a>
+        <a href="#0">Bits of</a>
+        <a href="#0">Text</a>
+    </div>
+
+    <main>
+        <div>I'm a centered line.</div>
+    </main>
+</body>
+</html>
