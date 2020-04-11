@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>行内元素水平居中</title>
+    <!-- 父元素设置text-align: center即可 -->
+    <style>
+        body {
+            background: rebeccapurple;
+            margin: 0;
+            padding: 0;
+        }
+        header, nav {
+            text-align: center;
+            background: white;
+            padding: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 要求水平居中的元素是：行内元素或者具有行内元素性质的元素（比如文字、链接？） -->
+    
+    <!-- 行内元素，它的父元素为块级元素 -->
+    <header>This text is centered.</header>
+    <nav role="navigation">
+        <a href="#0">One</a>
+        <a href="#0">Two</a>
+        <a href="#0">Three</a>
+        <a href="#0">Four</a>
+    </nav>
+    <!-- 上述方案可以用于：inline、inline-block、inline-table、inline-flex等 -->
+</body>
+</html>

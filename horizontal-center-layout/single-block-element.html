@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>块级元素水平居中</title>
+    <!-- 块级元素的margin-left和margin-right设置为auto -->
+    <!-- 这个块级元素已经被设置了高度了，否则它会占满宽度，不需要居中 -->
+    <!-- 无论居中的块级元素和它的父元素的宽度是多少，都可以使用 -->
+    <style>
+        body {
+            background: rebeccapurple;
+        }
+        .center {
+            background: black;
+            color: white;
+            margin: 0 auto;
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        I'm a block level element and am centered.
+    </div>
+</body>
+</html>
