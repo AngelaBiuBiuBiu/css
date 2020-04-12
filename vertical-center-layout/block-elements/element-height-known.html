@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>要垂直居中的元素为块级元素-且元素高度已知</title>
+    <!-- 不知道元素的高度是比较常见的，有很多原因： -->
+    <!-- 1. 如果宽度改变，文本回流会改变高度； -->
+    <!-- 2. 文字样式改变会改变高度； -->
+    <!-- 3. 文字数量改变会改变高度； -->
+    <!-- 4. 一个固定比例的元素，比如图片，当重置尺寸的时候也会改变高度，等等。 -->
+
+    <!-- 但是，如果你知道元素的高度，你可以这样使元素垂直居中： -->
+    <style>
+        body {
+            background: rebeccapurple;
+        }
+        main {
+            background: white;
+            width: 300px;
+            height: 300px;
+
+            position: relative;
+        }
+        main div {
+            background: black;
+            color: white;
+            height: 100px; /* 要垂直居中的元素的高度已知 */
+
+            position: absolute;
+            top: 50%;
+            margin-top: -50px; /* 如果没有使用border-sizing:border-box的话，margin-top的值由padding和border计算得来 */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            I'm a block-level element with a fixed height, centered vertically within my parent.
+        </div>
+    </main>
+</body>
+</html>

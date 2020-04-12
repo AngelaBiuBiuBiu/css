@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>要垂直居中的元素为块级元素-且元素高度未知</title>
+    <style>
+        body {
+            background: rebeccapurple;
+        }
+    </style>
+    <!-- 法1: 使用transform -->
+    <style>
+        .parent {
+            background: white;
+            width: 300px;
+            height: 300px;
+
+            position: relative;
+        }
+        .son {
+            background: black;
+            color: white;
+
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%)
+        }
+    </style>
+    <!-- 法2: 如果你不介意元素是否拉伸了容器的高度，你还可以使用table或CSS display将元素放入表格即可 -->
+    <style>
+        .parent {
+            background: white;
+            width: 300px;
+            height: 300px;
+
+            /* position: relative; */
+            display: table;
+        }
+        .son {
+            background: black;
+            color: white;
+            padding: 20px;
+
+            display: table-cell;
+            vertical-align: middle;
+        }
+    </style>
+    <!-- 法3: 使用flex -->
+    <style>
+        .parent {
+            background: white;
+            width: 300px;
+            height: 300px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .son {
+            background: black;
+            color: white;
+            /* margin: auto; */
+            /* 也可以对子元素使用margin:auto让其在flex父元素中垂直居中 */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="son">I'm a block-level element with an unknown height, centered vertically within my parent.</div>
+    </div>
+</body>
+</html>
