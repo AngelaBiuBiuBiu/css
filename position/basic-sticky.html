@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>粘性定位</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .father {
+            /* overflow: hidden; */
+            /* overflow: overlay; */
+            /* overflow: scroll; */
+            /* overflow: auto; */
+        }
+        dl {
+            padding: 24px 0 0 0;
+        }
+        dt {
+            padding: 2px 0 0 12px;
+            color: #FFF;
+            background: #B8C1C8;
+            border-bottom: 1px solid #989EA4;
+            border-top: 1px solid #717D85;
+            font: bold 18px/21px Helvetica, Arial, sans-serif;
+
+            position: sticky;
+            top: -1px;
+        }
+        dd {
+            font: bold 18px/21px Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding-left: 12px;
+        }
+        dd+dd {
+            border-top: 1px solid #CCC;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <dl>
+            <dt>A</dt>
+            <dd>Andrew W.K.</dd>
+            <dd>Apparat</dd>
+            <dd>Arcade Fire</dd>
+            <dd>At The Drive-In</dd>
+            <dd>Aziz Ansari</dd>
+        </dl>
+        <dl>
+            <dt>C</dt>
+            <dd>Chromeo</dd>
+            <dd>Common</dd>
+            <dd>Converge</dd>
+            <dd>Crystal Castles</dd>
+            <dd>Cursive</dd>
+        </dl>
+        <dl>
+            <dt>E</dt>
+            <dd>Explosions In The Sky</dd>
+        </dl>
+        <dl>
+            <dt>T</dt>
+            <dd>Ted Leo & The Pharmacists</dd>
+            <dd>T-Pain</dd>
+            <dd>Thrice</dd>
+            <dd>TV On The Radio</dd>
+            <dd>Two Gallants</dd>
+        </dl>
+        <dl>
+            <dt>T</dt>
+            <dd>Ted Leo & The Pharmacists</dd>
+            <dd>T-Pain</dd>
+            <dd>Thrice</dd>
+            <dd>TV On The Radio</dd>
+            <dd>Two Gallants</dd>
+        </dl>
+        <dl>
+            <dt>T</dt>
+            <dd>Ted Leo & The Pharmacists</dd>
+            <dd>T-Pain</dd>
+            <dd>Thrice</dd>
+            <dd>TV On The Radio</dd>
+            <dd>Two Gallants</dd>
+        </dl>
+        <dl>
+            <dt>T</dt>
+            <dd>Ted Leo & The Pharmacists</dd>
+            <dd>T-Pain</dd>
+            <dd>Thrice</dd>
+            <dd>TV On The Radio</dd>
+            <dd>Two Gallants</dd>
+        </dl>
+    </div>
+</body>
+</html>

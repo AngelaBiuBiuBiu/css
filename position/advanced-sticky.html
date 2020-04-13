@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            color: #fff;
+            font-family: arial;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .main-container {
+            max-width: 600px;
+            margin: 0 auto;
+            border: solid 10px green;
+            padding: 10px;
+            margin-top: 40px;
+        }
+
+        .main-container * {
+            padding: 10px;
+            background: #aaa;
+            border: dashed 5px #000;
+        }
+
+        .main-container *+* {
+            margin-top: 20px;
+        }
+
+        .main-header {
+            height: 50px;
+            background: #aaa;
+            border-color: red;
+
+            position: sticky;
+            top: 0;
+        }
+
+        .main-content {
+            min-height: 1000px;
+        }
+        
+        .main-footer {
+            position: sticky;
+            bottom: 0;
+            border-color: red;
+        }
+
+        .other {
+            height: 900px;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main-container">
+        <header class="main-header">HEADER</header>
+        <div class="main-content">MAIN CONTENT</div>
+        <footer class="main-footer">FOOTER</footer>
+    </main>
+    <div class="other">test</div>
+
+</body>
+
+</html>
