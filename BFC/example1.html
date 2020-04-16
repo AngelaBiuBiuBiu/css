@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BFC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            background: yellow;
+            height: 100%;
+            margin-left: 50px;
+        }
+        .left {
+            background: red;
+            border: 3px solid gray;
+            width: 200px;
+            height: 200px;
+            opacity: 0.5;
+            /* 创建了一个BFC，浮动了，所以脱离原本的常规流的位置，所以.right就被定位到父元素的左上角 */
+            /* 这是因为BFC的特性：元素左边与容器左边相接触 */
+            float: left;
+        }
+        .right {
+            background: blue;
+            border: 3px solid gray;
+            width: 400px;
+            min-height: 100px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- 由于box没有创建BFC，所以计算高度的时候没有考虑.left的区域，这是因为BFC的特性：浮动区域不叠加到BFC区域上，所以会发生高度坍塌 -->
+    <div class="box">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

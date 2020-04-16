@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BFC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            background: #888;
+            height: 100%;
+            margin-left: 50px;
+        }
+        .left {
+            background: red;
+            border: 3px solid gray;
+            width: 200px;
+            height: 200px;
+            opacity: 0.5;
+            float: left;
+        }
+        .right {
+            background: blue;
+            border: 3px solid gray;
+            width: 400px;
+            min-height: 100px;
+            opacity: 0.5;
+        }
+        .little {
+            background: white;
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            float: left; 
+            /* .little成为BFC，相互之间互不影响 */
+            /* 若没有这行，则.right的子元素会垂直排列，它们处于同一个BFC下，会发生高度塌陷 */
+        }
+
+        .BFC {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="box BFC">           <!-- BFC  -->
+        <div class="left"></div>    <!-- BFC  -->
+        <!-- .right创建了BFC，根据BFC特性，BFC就是页面上一个独立的隔离容器，所以left和right之间互不影响，不再重叠  -->
+        <div class="right BFC">
+            <div class="little"></div>      <!-- BFC  -->
+            <div class="little"></div>      <!-- BFC  -->
+            <div class="little"></div>      <!-- BFC  -->
+        </div>
+    </div>
+</body>
+</html>

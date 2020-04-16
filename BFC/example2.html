@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BFC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            background: yellow;
+            height: 100%;
+            margin-left: 50px;
+        }
+        .left {
+            background: red;
+            border: 3px solid gray;
+            width: 200px;
+            height: 200px;
+            opacity: 0.5;
+            float: left;
+        }
+        .right {
+            background: blue;
+            border: 3px solid gray;
+            width: 400px;
+            min-height: 100px;
+            opacity: 0.5;
+        }
+
+        .BFC {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- BFC特性：计算BFC的高度时，考虑BFC所包含的所有元素，连浮动元素也参与计算 -->
+    <!-- 父元素创建了BFC，计算高度的时候需要考虑BFC所包含的所有元素，包括浮动元素 -->
+    <div class="box BFC">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+
+    <!-- 可以看出，利用BFC可以有效的清除浮动 -->
+</body>
+</html>
