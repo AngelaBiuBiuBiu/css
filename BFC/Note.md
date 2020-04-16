@@ -1,4 +1,4 @@
-BFC——Block Formatting Context，块格式化上下文
+# BFC——Block Formatting Context，块格式化上下文
 
 # 视觉格式化模型
 它是用来处理文档并将它显示在视觉媒体上的机制，也是CSS中的一个概念。
@@ -9,7 +9,7 @@ BFC——Block Formatting Context，块格式化上下文
 ### 1. 当元素的CSS属性display为block，list-item或table时，它是块级元素
 ### 2. 视觉上呈现为块，竖直排列
 ### 3. 块级盒参与BFC（块格式化上下文）
-### 4. 每个块级元素至少生成一个块级盒，成为主要块级盒。一些元素比如<li>，生产额外的盒来放置项目符号，不过多数元素只生成一个主要块级盒。
+### 4. 每个块级元素至少生成一个块级盒，成为主要块级盒。一些元素比如`<li>`，生产额外的盒来放置项目符号，不过多数元素只生成一个主要块级盒。
 
 ## 行内盒
 ### 1. 当CSS的属性display的计算值为inline，inline-block或inline-table时，成为行内级元素
@@ -37,24 +37,24 @@ BFC——Block Formatting Context，块格式化上下文
 
 定位时，有三种定位方案，分别是常规流，浮动和绝对定位。
 ## 1. 常规流
-#### 在常规流中，盒一个接一个排列
-#### 在块级格式化上下文里，它们竖着排列
-#### 在行内格式化上下文里，它们横着排列
-#### 当position为static或relative，并且float为none时会触发常规流
-#### 相对于静态定位，position：static，盒的位置是常规里布局里的位置
-#### 相对于相对定位，position：relative，盒偏移的位置由top、bottom、left、right属性定义，即使有偏移，仍然保留原有的位置，其他常规流不能占用这个位置
+#### （1）在常规流中，盒一个接一个排列
+#### （2）在块级格式化上下文里，它们竖着排列
+#### （3）在行内格式化上下文里，它们横着排列
+#### （4）当position为static或relative，并且float为none时会触发常规流
+#### （5）相对于静态定位，position：static，盒的位置是常规里布局里的位置
+#### （6）相对于相对定位，position：relative，盒偏移的位置由top、bottom、left、right属性定义，即使有偏移，仍然保留原有的位置，其他常规流不能占用这个位置
 
 ## 2. 浮动
-#### 盒称为浮动盒
-#### 它位于当前行的开头或末尾
-#### 这导致常规流环绕在它的周边，除非设置clear属性
+#### （1）盒称为浮动盒
+#### （2）它位于当前行的开头或末尾
+#### （3）这导致常规流环绕在它的周边，除非设置clear属性
 
 ## 3. 绝对定位
-#### 绝对定位方案，盒从常规流中被移除，不影响常规流的布局
-#### 它的定位相对于它的包含块
-#### 如果元素的属性为position：absolute或fixed时，它是绝对定位元素
-#### 对于position：absolute，元素定位将相对于最近的一个relative、fixed或absolute的父元素，如果没有则相对于body
-#### 对于position：fixed，当元素的祖先的transform、perspective或filter属性为非none时，容器由视口改为该祖先。
+#### （1）绝对定位方案，盒从常规流中被移除，不影响常规流的布局
+#### （2）它的定位相对于它的包含块
+#### （3）如果元素的属性为position：absolute或fixed时，它是绝对定位元素
+#### （4）对于position：absolute，元素定位将相对于最近的一个relative、fixed或absolute的父元素，如果没有则相对于body
+#### （5）对于position：fixed，当元素的祖先的transform、perspective或filter属性为非none时，容器由视口改为该祖先。
 
 # 块格式化上下文
 块格式化上下文（BFC）是页面CSS视觉渲染的一部分，用于决定块盒子的布局及浮动相互影响范围的一个区域。
@@ -98,4 +98,4 @@ BFC还有更多的特性：
 6. 浮动盒区域不叠加到BFC上
 
 
-## 下面是4个示例，友情提醒：按顺序查看和学习～
+>下面是4个示例（example1、example2、example3、example4），友情提醒：按顺序查看和学习～
