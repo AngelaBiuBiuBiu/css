@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圣杯布局</title>
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        header, footer {
+            /* 即flex-grow为1，等分剩余空间 */
+            flex: 1;
+            background: red;
+        }
+        .body {
+            display: flex;
+            flex: 1;
+        }
+        main {
+            flex: 1;
+            background: blue;
+        }
+        nav, aside {
+            /* 宽度设为12em，有多余空间时不放大，空间不足时也不缩小 */
+            flex: 0 0 12em;
+        }
+        nav {
+            /* 导航放到最左边 */
+            order: -1;
+            background: yellow;
+        }
+        aside {
+            background: pink;
+        }
+        /* 如果是小屏幕，躯干的三栏自动变为垂直叠加 */
+        @media (max-width: 768px) {
+            .body {
+                flex-direction: column;
+                flex: 1;
+            }
+            main, nav, aside {
+                /* 即flex: 1 1 auto，有剩余空间时等分，空间不足时等比例缩小 */
+                flex: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <div class="body">
+        <main>content</main>
+        <nav>nav</nav>
+        <aside>ads</aside>
+    </div>
+    <footer>footer</footer>
+</body>
+</html>
